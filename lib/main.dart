@@ -15,34 +15,52 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Wallahi, ini title'),
+          title: Text('my application'),
           centerTitle: true,
           backgroundColor: Colors.red[600],
         ),
-        body: Center(
+        body: Container(
+          width: double.infinity,
+          color: Colors.yellow[600],
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text('Assalamualaikum'),
-              Container(
-                padding: EdgeInsets.all(20),
-                margin: EdgeInsets.all(20),
-                child: TextButton(
-                    onPressed: () {},
-                    child: Container(
-                        color: Colors.blue,
-                        margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.all(10),
-                        child: Text(
-                          'click me!',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ))),
-              )
-            ],
-          ),
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  color: Colors.green,
+                  margin: EdgeInsets.only(
+                    top: 10,
+                    bottom: 10,
+                  ),
+                  child: Center(
+                    child: Text('one'),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                    top: 10,
+                    bottom: 10,
+                  ),
+                  color: Colors.green,
+                  child: Center(child: Text('two')),
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                    top: 10,
+                    bottom: 10,
+                  ),
+                  color: Colors.green,
+                  child: Center(child: Text('three')),
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                    top: 10,
+                    bottom: 10,
+                  ),
+                  color: Colors.green,
+                  child: Center(child: Text('four')),
+                ),
+              ]),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
