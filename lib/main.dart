@@ -15,53 +15,36 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('my application'),
+          title: Text('bismillah'),
           centerTitle: true,
           backgroundColor: Colors.red[600],
         ),
-        body: Container(
-          width: double.infinity,
-          color: Colors.yellow[600],
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  color: Colors.green,
-                  margin: EdgeInsets.only(
-                    top: 10,
-                    bottom: 10,
-                  ),
-                  child: Center(
-                    child: Text('one'),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                    top: 10,
-                    bottom: 10,
-                  ),
-                  color: Colors.green,
-                  child: Center(child: Text('two')),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                    top: 10,
-                    bottom: 10,
-                  ),
-                  color: Colors.green,
-                  child: Center(child: Text('three')),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                    top: 10,
-                    bottom: 10,
-                  ),
-                  color: Colors.green,
-                  child: Center(child: Text('four')),
-                ),
-              ]),
-        ),
+        body: Row(children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.cyan,
+              child: Text('one'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.pinkAccent,
+              child: Text('two'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.amber,
+              child: Text('three'),
+            ),
+          ),
+        ]),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           child: Text('click'),
